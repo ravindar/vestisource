@@ -1,0 +1,107 @@
+#floating_right {
+    width: 80px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: right;
+}
+
+/* START:mainlayout */
+/* Styles for main page */
+#banner {
+    background: lightblue;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid;
+    font: small-caps 40px / 40px "Times New Roman", serif;
+    color: black;
+    text-align: center;
+}
+
+#banner img {
+    float: left;
+}
+
+#columns {
+    background: lavender;
+}
+
+#main {
+    margin-left: 13em;
+    padding-top: 4ex;
+    padding-left: 2em;
+    background: white;
+}
+
+#side {
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 12em;
+    background: lavender;
+}
+
+#side a {
+    color: black;
+    font-size: small;
+}
+
+/* END:mainlayout */
+/* An entry in the store catalog */
+#store .entry {
+    overflow: auto;
+    margin-top: 1em;
+    border-bottom: 1px dotted #77d;
+}
+
+#store .title {
+    font-size: 120%;
+    font-family: sans-serif;
+}
+
+#store .entry img {
+    width: 80px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+#store .entry h3 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: #227;
+}
+
+#store .entry p {
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+#store .entry .price_line {
+    clear: both;
+    margin-bottom: 0.5em;
+}
+
+#store .entry .add_to_cart {
+    position: relative;
+}
+
+#store .entry .price {
+    color: #44a;
+    font-weight: bold;
+    margin-right: 2em;
+}
+
+/* Styles for the cart in the main page */
+#store .cart_title {
+    font: 120% bold;
+}
+
+#store .item_price, #store .total_line {
+    text-align: right;
+}
+
+#store .total_line .total_cell {
+    font-weight: bold;
+    border-top: 1px solid #595;
+}
