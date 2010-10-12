@@ -1,58 +1,62 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Product Id:</b>
-  <%= @product.productId %>
+<p id="notice">
+    <%= notice %>
 </p>
-
 <p>
-  <b>Name:</b>
-  <%= @product.name %>
+    <b>Product Id:</b>
+    <%= @product.productId %>
 </p>
-
 <p>
-  <b>Sku:</b>
-  <%= @product.sku %>
+    <b>Name:</b>
+    <%= @product.name %>
 </p>
-
 <p>
-  <img height=200px src="<%= @product.imageURL %>"/>
+    <b>Sku:</b>
+    <%= @product.sku %>
 </p>
-
-
+<p>
+    <img height=200px src="<%= @product.imageURL %>"/>
+</p>
 <div class="floating_right">
-  <b>Summary:</b>
-  <%= @product.notes %>
+    <b>Summary:</b>
+    <%= @product.notes %>
 </div>
 <p>
-  <b>Notes:</b>
+    <b>Notes:</b>
 </p>
 <p>
-      <b>Commenter:</b>
-      <b> Comment:</b>
-    </p>
-    <% @product.comments.each do |comment| %>
-    <p>
-      <%= comment.commenter %>
-      <%= comment.body %>
-    </p>
+    <b>Commenter:</b>
+    <b>Comment:</b>
+</p>
+<% @product.comments.each do |comment| %>
+<p>
+    <%= comment.commenter %>
+    <%= comment.body %>
+</p>
 <% end %>
 <%= form_for([@product, @product.comments.build]) do |f| %>
-    <div class="field">
-      <%= f.label :commenter %>
-      <br/>
-      <%= f.text_field :commenter %>
-    </div>
-    <div class="field">
-      <%= f.label :body %>
-      <br/>
-      <%= f.text_area :body %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+<div class="field">
+    <%= f.label :commenter %>
+    <br/>
+    <%= f.text_field :commenter %>
+</div>
+<div class="field">
+    <%= f.label :body %>
+    <br/>
+    <%= f.text_area :body %>
+</div>
+<div class="actions">
+    <%= f.submit %>
+</div>
 <% end %>
+<hr width="100%">
+<p>
+  <b>email:</b>
+</p>
+	<p>
+      <b>From:</b>
+    </p>
+    <p>
+	  <%= @product.emailfrom %>
+    </p>
 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_product_path(@product) %> |<%= link_to 'Back', products_path %>
